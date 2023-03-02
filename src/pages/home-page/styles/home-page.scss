@@ -1,2 +1,14 @@
-/// Homepage Styles File
-/// Here we import all the Styles files we need for our Homepage.
+@import '_card-component.scss';
+
+
+#home-page{
+  height: auto;
+  width: 100%;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@include card-component

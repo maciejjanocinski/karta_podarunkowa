@@ -3,6 +3,39 @@
 /// For examples see Material Design color system: https://m2.material.io/design/color/the-color-system.html
 
 :root {
-    --color-primary: #5721f2;
-    --color-on-surface: #000;
+  --margin-big: 32px;
+  --margin-top-bottom: 40px;
+  --flex-direction: row;
+  --img-width: 280px;
+  --img-container-h: auto;
+  --overflow-img: visible;
+  --text-section-margin: 32px;
+  --margin-right-titte: 138px;
+  --margin-right-description: 18px;
 }
+
+@media only screen and (max-width: 700px) {
+  :root {
+    --flex-direction: column;
+    --img-width: 280px;
+    --img-container-h: 300px;
+    --overflow-img: hidden;
+    --margin-top-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  :root {
+    --text-section-margin: 16px;
+    --img-width: 256px;
+    --img-height: 410px;
+    --img-container-h: 246px;
+    --margin-right-titte: 68px;
+    --margin-right-description: 0px;
+    --margin-top-bottom: 9px;
+  }
+}
+
+
+
+
+

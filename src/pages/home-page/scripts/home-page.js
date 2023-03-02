@@ -3,6 +3,22 @@
 
 import '../styles/home-page.scss'
 
-import { setupCounter } from '../../../global-scripts/scripts/counter/counter.js'
+const colors = document.querySelectorAll('.card-component__colorway');
+const addToBasketBtn = document.querySelector('.card-component__addToBasketButton')
 
-setupCounter(document.querySelector('#counter'))
+let selectedColor = 'różowym';
+
+
+colors.forEach(col => {
+    col.addEventListener('click', event => {
+        colors.forEach(e => e.classList.remove('selected'))
+        event.target.classList.add('selected')
+        selectedColor = event.target.value
+
+    })
+})
+
+
+addToBasketBtn.addEventListener('click', () => {
+    alert(`Portfel w kolorze ${selectedColor} został dodany do koszyka.`)
+})

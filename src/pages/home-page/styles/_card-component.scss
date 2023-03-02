@@ -1,0 +1,166 @@
+@mixin card-component {
+  .card-component {
+    width: 100%;
+    margin: 16px;
+    max-width: 677px;
+    height: auto;
+    min-height: 451px;
+    display: flex;
+    flex-direction: var(--flex-direction);
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+
+    & &__img-container{
+      display: flex;
+      justify-content: center;
+      height: var(--img-container-h);
+      overflow: var(--overflow-img);
+      background-color: rgba(236, 236, 236, 0.42);
+    }
+
+    & &__image {
+      height: var(--img-height);
+      width: var(--img-width);
+      display: flex;
+      align-self: center;
+    }
+
+    & &__text-section {
+      margin: var(--text-section-margin);
+    }
+
+    & &__category {
+      margin-top: var(--margin-top-bottom);
+
+      letter-spacing: -0.01em;
+      line-height: 16.8px;
+      color: #F8B69D;
+    }
+
+    & &__title {
+      font-family: 'Playfair Display', serif;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 35.2px;
+      margin-right: var(--margin-right-titte);
+      margin-top: 8px;
+      margin-bottom: 11px;
+    }
+
+    & &__description {
+      color: #979797;
+
+      letter-spacing: -0.01em;
+      line-height: 16.8px;
+      margin-right: var(--margin-right-description);
+    }
+
+    & &__color-header {
+      margin-top: 16px;
+      line-height: 16.8px;
+      letter-spacing: -0.01em;
+    }
+
+    & &__color-section {
+
+      margin-top: 8px;
+      margin-bottom: 24px;
+      height: 24px;
+
+    }
+
+    & &__colorway {
+      margin-right: 12px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50px;
+      border: 0 solid transparent;
+      cursor: pointer;
+
+      &--pink {
+        background-color: #F8E0D7;
+      }
+
+      &--red {
+        background-color: #F8D7D7;
+      }
+
+      &--yellow {
+        background-color: #F8EFD7;
+      }
+
+      &--gray {
+        background-color: #ECECEC;
+      }
+
+
+    }
+    .selected{
+      border: 1px solid black;
+    }
+
+    & &__prices {
+      height: 26px;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 16px;
+
+
+
+    }
+
+    & &__current-price {
+      font-size: 24px;
+      line-height: 26.4px;
+      font-weight: 700;
+      margin-right: 12px;
+
+      span {
+        font-size: 14px;
+        line-height: 15.4px;
+      }
+    }
+
+    & &__last-price{
+
+      font-size: 14px;
+      line-height: 26.4px;
+      font-weight: 00;
+      color: #979797;
+      text-decoration-line: line-through;
+
+      span {
+        font-size: 14px;
+        line-height: 15.4px;
+      }
+    }
+
+    & &__addToBasketButton {
+      font-size: 14px;
+      line-height: 19.6px;
+      letter-spacing: -0.01em;
+      margin-bottom: var(--margin-top-bottom);
+
+      width: 100%; //91.25%;
+      border-radius: 12px;
+      border: 0 solid transparent;
+      height: 48px;
+      background-color: #F8B69D;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover{
+        background-color: #FFC4AD;
+      }
+
+      &:active{
+        background-color: #F1AD94;
+        transition: all 0.05s ease-in-out;
+      }
+    }
+
+  }
+
+}
+
